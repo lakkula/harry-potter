@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+}
+
+.outer-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.box{
+    width: 400px;
+    height: 240px;
+    outline: 3px solid red;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+}
+
+.box span img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: rotateX(calc(var(--i) * 45deg)) translateZ(300px);
+
+}
