@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    --view-angle: 1500;
 }
 
 .outer-div{
@@ -11,12 +12,13 @@
 }
 
 .box{
-    width: 400px;
-    height: 240px;
+    width: 350px;
+    height: 200px;
     outline: 3px solid red;
     position: relative;
     transform-style: preserve-3d;
-    transform: rotateY(0deg);
+    /*transform: rotateY(35deg);*/
+    animation: animate 20s linear infinite;
 }
 
 .box span img{
@@ -34,6 +36,14 @@
     left: 0;
     height: 100%;
     width: 100%;
-    transform: rotateX(calc(var(--i) * 45deg)) translateZ(300px);
+    transform: rotateX(calc(var(--i) * 45deg)) translateZ(240px);
+}
 
+@keyframes animate{
+    0%{
+        transform:perspective(calc(var(--view-angle) * 1px)) rotateX(0deg) rotateY(35deg);
+    }
+    100%{
+        transform:perspective(calc(var(--view-angle) * 1px)) rotateX(360deg) rotateY(35deg);
+    }
 }
