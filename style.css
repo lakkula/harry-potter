@@ -63,9 +63,9 @@ h1{
 
 @keyframes animate{
     0%{
-        transform:perspective(calc(var(--view-angle) * 1px)) rotateX(0deg) rotateY(35deg);
+        transform:perspective(calc(var(--view-angle) * 1px)) rotateX(0deg) rotateY(40deg);
     }
     100%{
-        transform:perspective(calc(var(--view-angle) * 1px)) rotateX(360deg) rotateY(35deg);
+        transform:perspective(calc(var(--view-angle) * 1px)) rotateX(360deg) rotateY(40deg);
     }
 }
